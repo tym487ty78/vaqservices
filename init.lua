@@ -14,8 +14,17 @@ local init = function(key)
   initalized = true
 end
 
+local initalized = function()
+  -- return initalized -- this is dumb because u can edit function, like: initalized() = true | ik its local.
+  if initalized then return true else return false end
+end
+
 local function1 = function(arg)
   if initalized then print(arg) end
 end
 
-return {init=init,function1=function1}
+return {
+  init=init,
+  function1=function1,
+  initalized=initalized,
+}
