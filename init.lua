@@ -13,3 +13,5 @@ end
 local function1 = function(arg)
   if initalized then print(arg1) end
 end
+
+return {init=init,function1=function1}
